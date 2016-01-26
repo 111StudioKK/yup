@@ -52,7 +52,7 @@ inherits(ArraySchema, MixedSchema, {
 
     return MixedSchema.prototype._validate.call(this, _value, _opts, _state)
       .catch(endEarly ? null : err => {
-        errors = err
+        errors.push(err)
         return err.value
       })
       .then(function(value){

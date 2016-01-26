@@ -18,7 +18,7 @@ function SchemaType(options = {}){
     return new SchemaType()
 
   this._deps        = []
-  this._options     = { abortEarly: true, recursive: true }
+  this._options     = { abortEarly: false, recursive: true }
   this._exclusive   = Object.create(null)
   this._whitelist   = new BadSet()
   this._blacklist   = new BadSet()
